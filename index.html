@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#1d0b1a">
-<title>Happy Birthday Prokodi</title>
+<title>Advance Happy Birthday Prokodi</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 :root{--rose:#ff7eb0;--pink:#ffc2d9;--gold:#ffd9a8;--plum:#1d0b1a;--wine:#3b1030;--script:'Great Vibes','Brush Script MT',cursive;--sans:'Poppins',system-ui,sans-serif}
@@ -181,13 +181,13 @@ body.go .hb .l{animation:rise .9s cubic-bezier(.2,1.4,.4,1) forwards}
   <section class="slide" id="finale">
     <p class="small rv fx-up">Advance Happy Birthday</p>
     <div class="name rv fx-bloom" style="font-size:clamp(70px,26vw,130px)">Porkodi</div>
-    <p class="quote rv fx-up">Happy Birthday, my love. You are my today, my tomorrow and my forever.</p>
+    <p class="quote rv fx-up">Advance Happy Birthday, my love. You are my today, my tomorrow and my forever.</p>
     <p class="sig rv fx-up">— Your Deepak 💖</p>
     <button class="btn" id="boom" onclick="surprise(event)">Tap for a surprise 🎆</button>
   </section>
 </main>
 
-<div id="sup"><canvas id="fw"></canvas><div class="in2"><div class="cake">🎂</div><div class="t1">HAPPY BIRTHDAY</div><div class="t2">Porkodi</div><div class="t3">Ten years with you and my heart still skips for you. I love you, always. 💖</div><button class="btn" onclick="closeSup()" style="margin-top:14px;animation:none">Close ✕</button></div></div>
+<div id="sup"><canvas id="fw"></canvas><div class="in2"><div class="cake">🎂</div><div class="t1">Advance HAPPY BIRTHDAY</div><div class="t2">Porkodi</div><div class="t3">Ten years with you and my heart still skips for you. I love you, always. 💖</div><button class="btn" onclick="closeSup()" style="margin-top:14px;animation:none">Close ✕</button></div></div>
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 /* falling petals */
@@ -212,7 +212,7 @@ function count(el){if(el.done)return;el.done=1;const to=+el.dataset.count,pl=el.
 const fin=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!fin.d){fin.d=1;setTimeout(party,500)}}),{threshold:.6});fin.observe($('#finale'));
 function party(){const s=['🎉','🎊','💖','🎂','✨','🌸','💕','🎈'];for(let i=0;i<5;i++)setTimeout(()=>burst(innerWidth*(.15+Math.random()*.7),innerHeight*(.25+Math.random()*.4),22,s),i*350)}
 let fwOn=0;
-function surprise(e){try{if(e)e.stopPropagation();$('#sup').classList.add('show');party();fireworks();if(navigator.vibrate)navigator.vibrate(60)}catch(x){alert('Advance Happy Birthday Porkodi 💖')}}
+function surprise(e){try{if(e)e.stopPropagation();$('#sup').classList.add('show');party();fireworks();if(navigator.vibrate)navigator.vibrate(60)}catch(x){alert('Advance  Birthday Porkodi 💖')}}
 function closeSup(){$('#sup').classList.remove('show');fwOn=0}
 function fireworks(){const c=$('#fw'),x=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;fwOn=1;let ps=[];function shot(){const X=innerWidth*(.15+Math.random()*.7),Y=innerHeight*(.1+Math.random()*.4),hu=Math.random()*360;for(let i=0;i<46;i++){const a=i/46*6.28,v=2+Math.random()*3.5;ps.push({x:X,y:Y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:1,h:hu})}}shot();const iv=setInterval(()=>{if(!fwOn)return clearInterval(iv);shot()},650);(function f(){if(!fwOn)return;x.fillStyle='rgba(20,5,18,.22)';x.fillRect(0,0,c.width,c.height);ps=ps.filter(p=>p.l>0);for(const p of ps){p.x+=p.vx;p.y+=p.vy;p.vy+=.05;p.vx*=.99;p.l-=.012;x.fillStyle='hsla('+p.h+',100%,70%,'+p.l+')';x.beginPath();x.arc(p.x,p.y,2.2,0,6.28);x.fill()}requestAnimationFrame(f)})()}
 </script>
